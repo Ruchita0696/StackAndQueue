@@ -28,6 +28,26 @@ namespace StackAndQueue
             Console.WriteLine("{0} pushed to stack", data);
         
         }
+        public void Peak()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty.");
+                return;
+            }
+            Console.WriteLine($"{this.top.data} is on the top of Stack");
+        }
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty ");
+                return ;
+            }
+            Console.WriteLine($"Item popped is {top.data}");
+            top = top.next;
+        }
+
         public void Display()
         {
             int i = 1;
